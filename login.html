@@ -11,17 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script>
-
-        function tick() {
-            $('#ticker_01 li:first').slideUp(function () { $(this).appendTo($('#ticker_01')).slideDown(); });
-        }
-        setInterval(function () { tick() }, 5000);
-    </script>
-
-
 </head>
 <style>
     @font-face {
@@ -54,12 +43,19 @@
 
     .searchbar {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     #search {
         border-radius: 5px;
         width: 400px;
+        height: 20px;
+
+    }
+
+    #search2 {
+        border-radius: 5px;
+        width: 100px;
         height: 20px;
 
     }
@@ -84,75 +80,6 @@
         background-color: #30CED8;
     }
 
-    .notice {
-        background-color: #30CED8;
-
-    }
-
-
-    .bestgoods {
-        display: flex;
-
-    }
-
-    .besttext {
-        display: flex;
-        justify-content: center;
-        background-color: #FE4F79;
-
-    }
-
-    .bg {
-        width: 375px;
-        height: 300px;
-        margin: 10px;
-        margin-top: 0;
-    }
-
-    .bgbig {
-        width: 700px;
-        height: 650px;
-        margin: 10px;
-        margin-top: 0;
-    }
-
-    .goodsbig {
-        display: flex;
-        flex-flow: 1 100%;
-        flex-wrap: wrap;
-    }
-
-    .goodssmall {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    .goodssmall-1 {
-        display: flex;
-    }
-
-    .goodssmall-2 {
-        display: flex;
-    }
-
-    .newtext {
-        display: flex;
-        justify-content: center;
-        background-color: #30CED8;
-    }
-
-    .newgoods {
-        display: flex;
-        margin-top: 5px;
-        margin-top: 0;
-    }
-
-    .ng {
-        width: 366px;
-        margin: 5px;
-        margin-top: 0;
-    }
 
     .footer {
         display: flex;
@@ -174,38 +101,100 @@
         flex: 1 25%;
     }
 
-    #page {
-        width: 500px;
-
-    }
-
-    .highlight {
-        font-size: 50px;
-
-    }
-
-    .ticker {
-        width: 500px;
-        height: 30px;
-        overflow: hidden;
-
-        margin: 0;
-        padding: 0;
+    li {
         list-style: none;
-
-
     }
 
-    #ticker_02 {
-        height: 120px;
-    }
 
-    .ticker li {
-        height: 30px;
+    .loginwrap {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .login {
+        width: 30%;
+        height: 600px;
+
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h2 {
+        color: #FE4F79;
+        font-size: 2em;
+    }
 
 
+
+    .login_id {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .login_id input {
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        margin-top: 10px;
+        padding: 0px 20px;
+        border: 1px solid lightgray;
+        outline: none;
+    }
+
+    .login_pw {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .login_pw input {
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        margin-top: 10px;
+        padding: 0px 20px;
+        border: 1px solid lightgray;
+        outline: none;
+        color: black;
+        
+
+    }
+    input[type=password] { 
+        font-family:'Courier New', Courier, monospace; }
+        ::placeholder { 
+        font-family: 'Cafe24Oneprettynight'; 
+        
+    } 
+
+
+
+    .login_etc {
+        padding: 10px;
+        width: 80%;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .submit {
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .submit input {
+        width: 100%;
+        height: 50px;
+        border: 0;
+        outline: none;
+        border-radius: 40px;
+        background: #FE4F79;
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 2px;
     }
 </style>
 
@@ -227,6 +216,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li><button class="dropdown-item" type="button">전체보기</button></li>
+                   
                 </ul>
             </div>
             <div class="dropdown">
@@ -235,7 +225,8 @@
                     거실
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button" onclick = "location.href = 'livingroom.html' ">쇼파</button></li>
+                    <li><button class="dropdown-item" type="button"
+                            onclick="location.href = 'livingroom.html' ">쇼파</button></li>
                     <li><button class="dropdown-item" type="button">거실테이블 </button></li>
                 </ul>
             </div>
@@ -284,78 +275,30 @@
                 </ul>
             </div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+        <div class="loginwrap">
+            <div class="login">
+                <h2>로그인</h2>
+
+                <div class="login_id">
+                    <h4>아이디</h4>
+                    <input type="text" name="" id="" placeholder="아이디">
+                </div>
+                <div class="login_pw">
+                    <h4>비밀번호</h4>
+                    <input type="password" name="" id="" placeholder="비밀번호">
+                </div>
+                <div class="login_etc">
+                    <div class="forgot_id">
+                        <a href="">Forgot ID?</a>
+                    </div>
+                    <div class="forgot_pw">
+                        <a href="">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="submit">
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="397353dd623e3caff0854dd19ef006f5_20657.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item ">
-                    <img src="4cd44600782d5cf3d6ebeaf5fce05f74_39420.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item ">
-                    <img src="다운로드.jpeg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="notice">
-            <div id="page">
-                <ul id="ticker_01" class="ticker">
-                    <li>오픈기념 99% 세일중!!</li>
-                    <li>사장님이 미쳤어요</li>
-                    <li>아무나 사가라</li>
-                </ul>
-            </div>
-
-
-        </div>
-        <div class="besttext"> BEST 상품</div>
-        <div class="bestgoods">
-            <div class="goodsbig"><img src="goods\1000001414_main_060.jpg" alt="" class="bgbig">인기제품</div>
-            <div class="goodssmall">
-                <div class="goodssmall-1">
-                    <div class="goods"><img src="goods\1000001588_main_086.jpg" alt="" class="bg">제품1</div>
-                    <div class="goods"> <img src="goods\1000001672_main_070.jpg" alt="" class="bg">제품2</div>
-                </div>
-                <div class="goodssmall-2">
-                    <div class="goods"><img src="goods\1000001687_main_047.jpg" alt="" class="bg">제품3</div>
-                    <div class="goods"><img src="goods\register_main_039.jpg" alt="" class="bg">제품4</div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="newtext">신상품</div>
-        <div class="newgoods">
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-
-
-        </div>
-        <div class="newgoods">
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
         </div>
         <div class="footer">
             <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
@@ -364,6 +307,7 @@
             <div class="account">입금계좌</div>
         </div>
     </div>
+
 </body>
 
 </html>

@@ -11,17 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script>
-
-        function tick() {
-            $('#ticker_01 li:first').slideUp(function () { $(this).appendTo($('#ticker_01')).slideDown(); });
-        }
-        setInterval(function () { tick() }, 5000);
-    </script>
-
-
 </head>
 <style>
     @font-face {
@@ -51,10 +40,10 @@
     .logo {
         color: #30CED8;
     }
-
+    
     .searchbar {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     #search {
@@ -63,12 +52,18 @@
         height: 20px;
 
     }
+    #search2 {
+        border-radius: 5px;
+        width: 100px;
+        height: 20px;
+
+    }
 
     .nav {
         display: flex;
         justify-content: space-around;
         background-color: #30CED8;
-
+        
     }
 
     .dropdown-toggle::after {
@@ -84,74 +79,52 @@
         background-color: #30CED8;
     }
 
-    .notice {
-        background-color: #30CED8;
-
-    }
-
-
-    .bestgoods {
-        display: flex;
-
-    }
-
-    .besttext {
+    h1 {
         display: flex;
         justify-content: center;
-        background-color: #FE4F79;
-
+        margin-top: 20px;
     }
 
-    .bg {
-        width: 375px;
-        height: 300px;
-        margin: 10px;
-        margin-top: 0;
-    }
-
-    .bgbig {
-        width: 700px;
-        height: 650px;
-        margin: 10px;
-        margin-top: 0;
-    }
-
-    .goodsbig {
-        display: flex;
-        flex-flow: 1 100%;
-        flex-wrap: wrap;
-    }
-
-    .goodssmall {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    .goodssmall-1 {
-        display: flex;
-    }
-
-    .goodssmall-2 {
-        display: flex;
-    }
-
-    .newtext {
+    .menu {
         display: flex;
         justify-content: center;
-        background-color: #30CED8;
+        align-items: center;
+    }
+    .category{
+        display: flex;
+    }
+    .select{
+        display: flex;
+        justify-content: end;
+    }
+    .page{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    h3 {
+        margin: 20px;
+        color: gray;
     }
 
-    .newgoods {
+    select {
+        display: flex;
+        margin-left: auto;
+        width: 100px;
+        height: 20px;
+        
+    }
+    
+    .goods {
         display: flex;
         margin-top: 5px;
         margin-top: 0;
     }
 
-    .ng {
-        width: 366px;
-        margin: 5px;
-        margin-top: 0;
+    .item {
+        width: 350px;
+        margin-top: 50px;
+        margin: 10px;
     }
 
     .footer {
@@ -173,40 +146,6 @@
         background-color: #FE4F79;
         flex: 1 25%;
     }
-
-    #page {
-        width: 500px;
-
-    }
-
-    .highlight {
-        font-size: 50px;
-
-    }
-
-    .ticker {
-        width: 500px;
-        height: 30px;
-        overflow: hidden;
-
-        margin: 0;
-        padding: 0;
-        list-style: none;
-
-
-    }
-
-    #ticker_02 {
-        height: 120px;
-    }
-
-    .ticker li {
-        height: 30px;
-        display: flex;
-        justify-content: flex-start;
-
-
-    }
 </style>
 
 <body>
@@ -227,6 +166,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li><button class="dropdown-item" type="button">전체보기</button></li>
+                    
                 </ul>
             </div>
             <div class="dropdown">
@@ -284,79 +224,50 @@
                 </ul>
             </div>
         </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="397353dd623e3caff0854dd19ef006f5_20657.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item ">
-                    <img src="4cd44600782d5cf3d6ebeaf5fce05f74_39420.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item ">
-                    <img src="다운로드.jpeg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <h1>거실</h1>
+        <div class="menu">
+        
+                <h3 class="selected">쇼파</h3>
+                <h3>거실테이블</h3>
+            
+        
         </div>
-        <div class="notice">
-            <div id="page">
-                <ul id="ticker_01" class="ticker">
-                    <li>오픈기념 99% 세일중!!</li>
-                    <li>사장님이 미쳤어요</li>
-                    <li>아무나 사가라</li>
-                </ul>
-            </div>
-
-
+        
+            <select name="" id="">
+                <option value="최신순">최신순</option>
+                <option value="인기순">인기순</option>
+                <option value="가격 낮은 순">가격 낮은 순</option>
+                <option value="가격 높은 순">가격 높은 순</option>
+            </select>
+        
+        <div class="goods">
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
         </div>
-        <div class="besttext"> BEST 상품</div>
-        <div class="bestgoods">
-            <div class="goodsbig"><img src="goods\1000001414_main_060.jpg" alt="" class="bgbig">인기제품</div>
-            <div class="goodssmall">
-                <div class="goodssmall-1">
-                    <div class="goods"><img src="goods\1000001588_main_086.jpg" alt="" class="bg">제품1</div>
-                    <div class="goods"> <img src="goods\1000001672_main_070.jpg" alt="" class="bg">제품2</div>
-                </div>
-                <div class="goodssmall-2">
-                    <div class="goods"><img src="goods\1000001687_main_047.jpg" alt="" class="bg">제품3</div>
-                    <div class="goods"><img src="goods\register_main_039.jpg" alt="" class="bg">제품4</div>
-                </div>
-
-            </div>
-
+        <div class="goods">
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
         </div>
-        <div class="newtext">신상품</div>
-        <div class="newgoods">
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-
-
+        <div class="goods">
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
         </div>
-        <div class="newgoods">
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="ng" alt="">제품소개</div>
+        <div class="page">
+            <a href="#">1</a>&nbsp;&nbsp;&nbsp;
+            <a href="#">2</a>&nbsp;&nbsp;&nbsp;
+            <a href="#">3</a>
+            
         </div>
+        <form action="search">
+            <div class="searchbar"><input type="text" placeholder="검색어 입력" id="search2"><input type="image"
+                    src="btn_top_search.png"></div>
+        </form>
         <div class="footer">
             <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
             <div class="company">내일의집 주식회사<br>서울특별시 노원구 ....</div>
