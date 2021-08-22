@@ -12,7 +12,39 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
+<script>
+ $(function(){
+	$('#start_datepicker').datepicker({
+		lang:'ko',
+		dateFormat: 'yy-mm-dd',
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 텍스트
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 Tooltip
+        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 텍스트
+        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+	});
+})
+$(function(){
+	$('#end_datepicker').datepicker({
+		lang:'ko',
+		dateFormat: 'yy-mm-dd',
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 텍스트
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 Tooltip
+        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 텍스트
+        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+	});
+})
+
+
+
+    </script>
 <style>
     @font-face {
         font-family: 'Cafe24Oneprettynight';
@@ -76,6 +108,7 @@
 
     .section {
         display: flex;
+        flex-wrap: wrap;
 
     }
 
@@ -92,7 +125,7 @@
 
 
     .main {
-        flex: 1 80%;
+        flex: 1 75%;
     }
 
     .profile {
@@ -160,10 +193,11 @@
         margin-right: 7px;
     }
 
-    .date {
+    .srch_area {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     .datevalue{
         border: 1px solid #30CED8;
@@ -204,6 +238,7 @@
         background-color: #FE4F79;
         flex: 1 25%;
     }
+
 </style>
 
 <body>
@@ -332,17 +367,17 @@
                 <br>
                 <div class="orderlist">
                     <div class="date">
-                        <div class="date_check">
-                            <button data-value="0" class="datevalue">오늘</button>
-                            <button data-value="7" class="datevalue">일주일</button>
-                            <button data-value="15" class="datevalue">15일</button>
-                            <button data-value="30" class="datevalue">1개월</button>
-                            <button data-value="90" class="datevalue">3개월</button>
-                            <button data-value="365" class="datevalue">1년</button>
-
-                        </div>
-                        <input type="date" name="" id="">~<input type="date" name="" id=""><input type="submit" name=""
+                        <div class="srch_area">
+                            <button data-value="0" class="datevalue" id="r_today" name="today">오늘</button>
+                            <button data-value="7" class="datevalue" id="r_week" name="week">일주일</button>
+                            <button data-value="15" class="datevalue" id="r_last15" name="last15">15일</button>
+                            <button data-value="30" class="datevalue" id="r_month" name="month">1개월</button>
+                            <button data-value="90" class="datevalue" id="r_month3" name="month3">3개월</button>
+                            <button data-value="365" class="datevalue" id="r_lastyear" name="lastyear">1년</button>
+                            <input type="text" id="start_datepicker">~<input type="text" id="end_datepicker"><input type="submit" name=""
                             id="dateBtn" value="조회하기">
+                            
+                      
                     </div>
                     <div class="list">
 
@@ -369,6 +404,7 @@
 
             </div>
         </div>
+        </div>
 
         <div class="footer">
             <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
@@ -377,6 +413,71 @@
             <div class="account">입금계좌</div>
         </div>
     </div>
+    <script>
+        /* 날짜 객체 받아서 문자열로 리턴하는 함수 */
+function getDateStr(myDate){
+	return (myDate.getFullYear() + '-' + (myDate.getMonth() + 1) + '-' + myDate.getDate())
+}
+
+/* 오늘 날짜를 문자열로 반환 */
+function today() {
+  var d = new Date()
+  return getDateStr(d)
+}
+
+/* 오늘로부터 1주일전 날짜 반환 */
+function lastWeek() {
+  var d = new Date()
+  var dayOfMonth = d.getDate()
+  d.setDate(dayOfMonth - 7)
+  return getDateStr(d)
+}
+
+/* 오늘로부터 1개월전 날짜 반환 */
+function last15(){
+    var d = new Date()
+    var dayOfMonth = d.getDate()
+    d.setDate(dayOfMonth-15)
+    return getDateStr(d)
+}
+
+function lastMonth() {
+  var d = new Date()
+  var monthOfYear = d.getMonth()
+  d.setMonth(monthOfYear - 1)
+  return getDateStr(d)
+}
+function Month3() {
+  var d = new Date()
+  var monthOfYear = d.getMonth()
+  d.setMonth(monthOfYear - 3)
+  return getDateStr(d)
+}
+function lastyear() {
+  var d = new Date()
+  var monthOfYear = d.getMonth()
+  d.setMonth(monthOfYear - 12)
+  return getDateStr(d)
+}
+$(".srch_area :button").click(function(){
+  var rname = $(this).attr("name")
+  $("#end_datepicker").val(today())
+	if( rname == "today"){
+    $("#start_datepicker").val(today())
+  }else if(rname == "week") {
+  	$("#start_datepicker").val(lastWeek())
+  }else if(rname == "last15"){
+  $("#start_datepicker").val(last15())
+  }else if(rname == "month3"){
+  $("#start_datepicker").val(Month3())
+  }else if(rname == "lastyear"){
+  $("#start_datepicker").val(lastyear())
+  }
+  else{
+  	$("#start_datepicker").val(lastMonth())
+  }
+})
+    </script>
 </body>
 
 </html>
