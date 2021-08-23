@@ -16,35 +16,35 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
 <script>
- $(function(){
-	$('#start_datepicker').datepicker({
-		lang:'ko',
-		dateFormat: 'yy-mm-dd',
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 텍스트
-        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 Tooltip
-        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 텍스트
-        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
-	});
-})
-$(function(){
-	$('#end_datepicker').datepicker({
-		lang:'ko',
-		dateFormat: 'yy-mm-dd',
-		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 텍스트
-        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 Tooltip
-        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 텍스트
-        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
-	});
-})
+    $(function () {
+        $('#start_datepicker').datepicker({
+            lang: 'ko',
+            dateFormat: 'yy-mm-dd',
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //달력의 월 부분 텍스트
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //달력의 월 부분 Tooltip
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], //달력의 요일 텍스트
+            dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 Tooltip
+        });
+    })
+    $(function () {
+        $('#end_datepicker').datepicker({
+            lang: 'ko',
+            dateFormat: 'yy-mm-dd',
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //달력의 월 부분 텍스트
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //달력의 월 부분 Tooltip
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], //달력의 요일 텍스트
+            dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 Tooltip
+        });
+    })
 
 
 
-    </script>
+</script>
 <style>
     @font-face {
         font-family: 'Cafe24Oneprettynight';
@@ -133,7 +133,8 @@ $(function(){
         margin-top: 50px;
 
     }
-    .profile_text{
+
+    .profile_text {
         display: flex;
         justify-content: center;
     }
@@ -199,20 +200,22 @@ $(function(){
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    .datevalue{
+
+    .datevalue {
         border: 1px solid #30CED8;
         background-color: #30CED8;
-        padding:5px;
+        padding: 5px;
         margin-right: -4px;
         border-top-left-radius: 5px;
         border-bottom-right-radius: 5px;
         margin-left: 3px;
     }
-    .datevalue:active{
-        color:white ;
+
+    .datevalue:active {
+        color: white;
 
     }
-    
+
 
     .name {
         display: flex;
@@ -238,7 +241,6 @@ $(function(){
         background-color: #FE4F79;
         flex: 1 25%;
     }
-
 </style>
 
 <body>
@@ -249,7 +251,7 @@ $(function(){
                 <div class="searchbar"><input type="text" placeholder="검색어 입력" id="search"><input type="image"
                         src="btn_top_search.png"></div>
             </form>
-            <div class="menu"><a href="login.html"> 로그인 </a> | <a href="#"> 회원가입</a> </div>
+            <div class="menu"><a href="login.html"> 로그인 </a> | <a href="join.html"> 회원가입</a> </div>
         </div>
         <div class="nav">
             <div class="dropdown">
@@ -332,9 +334,9 @@ $(function(){
             <div class="main">
                 <div class="profile">
                     <div class="profile2">
-                    <div class="profile_img"><img src="image.jpeg" width="100px" alt=""></div>
-                    <div class="profile_text">ㅇㅇㅇ님</div>
-                </div>
+                        <div class="profile_img"><img src="image.jpeg" width="100px" alt=""></div>
+                        <div class="profile_text">ㅇㅇㅇ님</div>
+                    </div>
                     <div class="address"> 서울특별시 노원구 상계로 64 화랑빌딩 7F 이젠아카데미컴퓨터학원 노원점
                     </div>
                     <div class="mileage">
@@ -374,36 +376,36 @@ $(function(){
                             <button data-value="30" class="datevalue" id="r_month" name="month">1개월</button>
                             <button data-value="90" class="datevalue" id="r_month3" name="month3">3개월</button>
                             <button data-value="365" class="datevalue" id="r_lastyear" name="lastyear">1년</button>
-                            <input type="text" id="start_datepicker">~<input type="text" id="end_datepicker"><input type="submit" name=""
-                            id="dateBtn" value="조회하기">
-                            
-                      
-                    </div>
-                    <div class="list">
+                            <input type="text" id="start_datepicker">~<input type="text" id="end_datepicker"><input
+                                type="submit" name="" id="dateBtn" value="조회하기">
 
-                        <table>
-                            <tr>
-                                <th width="200px">날짜</th>
-                                <th width="200px">주문번호</th>
-                                <th width="200px">상품정보</th>
-                                <th width="200px">상품금액</th>
-                                <th width="200px">주문상태</th>
-                                <th width="200px">리뷰</th>
-                            </tr>
-                            <tr>
-                                <td width="100px">2021-08-20</td>
-                                <td width="100px">20121282</td>
-                                <td width="100px">비싼가구</td>
-                                <td width="100px">600,000원</td>
-                                <td width="100px">배송완료</td>
-                                <td width="100px"><a href=""> 리뷰쓰러가기</a></td>
-                            </tr>
-                        </table>
+
+                        </div>
+                        <div class="list">
+
+                            <table>
+                                <tr>
+                                    <th width="200px">날짜</th>
+                                    <th width="200px">주문번호</th>
+                                    <th width="200px">상품정보</th>
+                                    <th width="200px">상품금액</th>
+                                    <th width="200px">주문상태</th>
+                                    <th width="200px">리뷰</th>
+                                </tr>
+                                <tr>
+                                    <td width="100px">2021-08-20</td>
+                                    <td width="100px">20121282</td>
+                                    <td width="100px">비싼가구</td>
+                                    <td width="100px">600,000원</td>
+                                    <td width="100px">배송완료</td>
+                                    <td width="100px"><a href=""> 리뷰쓰러가기</a></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
+
                 </div>
-
             </div>
-        </div>
         </div>
 
         <div class="footer">
@@ -415,68 +417,68 @@ $(function(){
     </div>
     <script>
         /* 날짜 객체 받아서 문자열로 리턴하는 함수 */
-function getDateStr(myDate){
-	return (myDate.getFullYear() + '-' + (myDate.getMonth() + 1) + '-' + myDate.getDate())
-}
+        function getDateStr(myDate) {
+            return (myDate.getFullYear() + '-' + (myDate.getMonth() + 1) + '-' + myDate.getDate())
+        }
 
-/* 오늘 날짜를 문자열로 반환 */
-function today() {
-  var d = new Date()
-  return getDateStr(d)
-}
+        /* 오늘 날짜를 문자열로 반환 */
+        function today() {
+            var d = new Date()
+            return getDateStr(d)
+        }
 
-/* 오늘로부터 1주일전 날짜 반환 */
-function lastWeek() {
-  var d = new Date()
-  var dayOfMonth = d.getDate()
-  d.setDate(dayOfMonth - 7)
-  return getDateStr(d)
-}
+        /* 오늘로부터 1주일전 날짜 반환 */
+        function lastWeek() {
+            var d = new Date()
+            var dayOfMonth = d.getDate()
+            d.setDate(dayOfMonth - 7)
+            return getDateStr(d)
+        }
 
-/* 오늘로부터 1개월전 날짜 반환 */
-function last15(){
-    var d = new Date()
-    var dayOfMonth = d.getDate()
-    d.setDate(dayOfMonth-15)
-    return getDateStr(d)
-}
+        /* 오늘로부터 1개월전 날짜 반환 */
+        function last15() {
+            var d = new Date()
+            var dayOfMonth = d.getDate()
+            d.setDate(dayOfMonth - 15)
+            return getDateStr(d)
+        }
 
-function lastMonth() {
-  var d = new Date()
-  var monthOfYear = d.getMonth()
-  d.setMonth(monthOfYear - 1)
-  return getDateStr(d)
-}
-function Month3() {
-  var d = new Date()
-  var monthOfYear = d.getMonth()
-  d.setMonth(monthOfYear - 3)
-  return getDateStr(d)
-}
-function lastyear() {
-  var d = new Date()
-  var monthOfYear = d.getMonth()
-  d.setMonth(monthOfYear - 12)
-  return getDateStr(d)
-}
-$(".srch_area :button").click(function(){
-  var rname = $(this).attr("name")
-  $("#end_datepicker").val(today())
-	if( rname == "today"){
-    $("#start_datepicker").val(today())
-  }else if(rname == "week") {
-  	$("#start_datepicker").val(lastWeek())
-  }else if(rname == "last15"){
-  $("#start_datepicker").val(last15())
-  }else if(rname == "month3"){
-  $("#start_datepicker").val(Month3())
-  }else if(rname == "lastyear"){
-  $("#start_datepicker").val(lastyear())
-  }
-  else{
-  	$("#start_datepicker").val(lastMonth())
-  }
-})
+        function lastMonth() {
+            var d = new Date()
+            var monthOfYear = d.getMonth()
+            d.setMonth(monthOfYear - 1)
+            return getDateStr(d)
+        }
+        function Month3() {
+            var d = new Date()
+            var monthOfYear = d.getMonth()
+            d.setMonth(monthOfYear - 3)
+            return getDateStr(d)
+        }
+        function lastyear() {
+            var d = new Date()
+            var monthOfYear = d.getMonth()
+            d.setMonth(monthOfYear - 12)
+            return getDateStr(d)
+        }
+        $(".srch_area :button").click(function () {
+            var rname = $(this).attr("name")
+            $("#end_datepicker").val(today())
+            if (rname == "today") {
+                $("#start_datepicker").val(today())
+            } else if (rname == "week") {
+                $("#start_datepicker").val(lastWeek())
+            } else if (rname == "last15") {
+                $("#start_datepicker").val(last15())
+            } else if (rname == "month3") {
+                $("#start_datepicker").val(Month3())
+            } else if (rname == "lastyear") {
+                $("#start_datepicker").val(lastyear())
+            }
+            else {
+                $("#start_datepicker").val(lastMonth())
+            }
+        })
     </script>
 </body>
 

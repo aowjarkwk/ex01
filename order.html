@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <style>
     @font-face {
@@ -40,10 +41,10 @@
     .logo {
         color: #30CED8;
     }
-    
+
     .searchbar {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
     }
 
     #search {
@@ -52,18 +53,13 @@
         height: 20px;
 
     }
-    #search2 {
-        border-radius: 5px;
-        width: 100px;
-        height: 20px;
 
-    }
 
     .nav {
         display: flex;
         justify-content: space-around;
         background-color: #30CED8;
-        
+
     }
 
     .dropdown-toggle::after {
@@ -79,52 +75,109 @@
         background-color: #30CED8;
     }
 
-    h1 {
+    .order {
         display: flex;
-        justify-content: center;
-        margin-top: 20px;
     }
 
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .category{
-        display: flex;
-    }
-    .select{
-        display: flex;
-        justify-content: end;
-    }
-    .page{
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-    }
-    h3 {
-        margin: 20px;
-        color: gray;
-    }
-
-    select {
+    .process_ {
         display: flex;
         margin-left: auto;
-        width: 100px;
-        height: 20px;
-        
-    }
-    
-    .goods {
-        display: flex;
-        margin-top: 5px;
-        margin-top: 0;
+        align-items: flex-end;
     }
 
-    .item {
-        width: 350px;
-        margin-top: 50px;
+    .process_ p {
+        color: grey;
+    }
+
+    .line {
+        background-color: #FE4F79;
+        height: 10px;
+    }
+
+    table {
+        width: 1500px;
+    }
+
+    img {
         margin: 10px;
+
+    }
+
+    .detail {
+        margin: 10px;
+    }
+    .address{
+        margin-top: 30px;
+        border: 1px solid #e3e3e3;
+    }
+    .total{
+        margin-top: 30px;
+        border: 1px solid #e3e3e3;
+    }
+    .mileage{
+        margin-top: 30px;
+        border:1px solid #e3e3e3;
+    }
+    .payment {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #e3e3e3;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+
+
+    .payment h1 {
+        flex: 1 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .payment_method {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pay {
+        width: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .confirm {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #e3e3e3;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .confirm h3 {
+        display: flex;
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .skyblue {
+
+        width: 200px;
+        height: 30px;
+        border: 0;
+        outline: none;
+        border-radius: 40px;
+        background: #30CED8;
+        color: white;
+
+        letter-spacing: 2px;
+    }
+    th{
+        text-align: center;
     }
 
     .footer {
@@ -136,7 +189,9 @@
         flex: 1 25%;
 
     }
-
+    .input{
+        width: 400px;
+    }
     .cscenter {
         background-color: #30CED8;
         flex: 1 25%;
@@ -166,7 +221,6 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li><button class="dropdown-item" type="button">전체보기</button></li>
-                    
                 </ul>
             </div>
             <div class="dropdown">
@@ -175,7 +229,8 @@
                     거실
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button" onclick = "location.href = 'livingroom.html' ">쇼파</button></li>
+                    <li><button class="dropdown-item" type="button"
+                            onclick="location.href = 'livingroom.html' ">쇼파</button></li>
                     <li><button class="dropdown-item" type="button">거실테이블 </button></li>
                 </ul>
             </div>
@@ -202,8 +257,8 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn rgb(191, 246, 227) dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     서재
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -213,8 +268,8 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn rgb(191, 246, 227) dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     인테리어
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -224,56 +279,112 @@
                 </ul>
             </div>
         </div>
-        <h1>거실</h1>
-        <div class="menu">
-        
-                <h3 class="selected">쇼파</h3>
-                <h3>거실테이블</h3>
-            
-        
+        <div class="order">
+            <h1>주문/결제</h1>
+            <div class="process_">
+                <p>장바구니 ></p>
+                <p>주문서작성/결제 ></p>
+                <p>주문완료</p>
+            </div>
         </div>
-        
-            <select name="" id="">
-                <option value="최신순">최신순</option>
-                <option value="인기순">인기순</option>
-                <option value="가격 낮은 순">가격 낮은 순</option>
-                <option value="가격 높은 순">가격 높은 순</option>
-            </select>
-        
-        <div class="goods">
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+        <div class="line"></div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td width="150px"><img src="goods\1000001672_main_070.jpg" alt="" width="150px"></td>
+                    <td>목재 수납장 + 의자 세트 <br> 2개 <br>98,000원</td>
+                </tr>
+                <tr>
+                    <td><img src="goods\1000001687_main_047.jpg" alt="" width="150px"></td>
+                    <td>브라운 쇼파 <br>1개 <br>59,000원</td>
+                </tr>
+            </table>
         </div>
-        <div class="goods">
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+        <div class="address">
+            <h1>배송지</h1>
+            <table>
+                <tr>
+                    <th width="100px">수령인</th>
+                    <td><input type="text" class="input"></td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td><input type="text" name="" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <th>우편번호</th>
+                    <td><input type="text" name="" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td><input type="text" name="" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <th>상세주소</th>
+                    <td><input type="text" name="" id="" class="input"></td>
+                </tr>
+                <tr>
+                    <th>배송메모</th>
+                    <td><input type="text" name="" id="" class="input"></td>
+                </tr>
+            </table>
         </div>
-        <div class="goods">
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
-            <div><img src="goods\register_main_039.jpg" class="item" alt="">제품소개</div>
+        <div class="mileage">
+        <table>
+            <tr>
+                <th width="100px">마일리지 적용</th>
+                <td><input type="text" name="" id="" placeholder="5,050" class="input"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="total">
+        <table>
+            <tr>
+                <th width="100px">총 상품 금액</th>
+                <td>157,000원</td>
+            </tr>
+            <tr>
+                <th width="100px">배송비</th>
+                <td>0원</td>
+            </tr>
+            <tr>
+                <th width="100px">적용 마일리지</th>
+                <td>0원</td>
+            </tr>
+            <tr>
+                <th width="100px">총 결제 금액</th>
+                <td>157,000원</td>
+            </tr>
+        </table>
+    </div>
+        <div class="payment">
+            <h1>결제수단</h1>
+            <div class="payment_method">
+                <div class="card1"><label for="card1">신용카드</label>
+                    <input type="radio" name="payment" id="card1" class="pay">
+                </div>
+                <div class="kakaopay">
+                    <label for="kakaopay">카카오페이</label>
+                    <input type="radio" name="payment" id="kakaopay" class="pay">
+                </div>
+                <div class="account-payment">
+                    <label for="account-payment">무통장입금</label>
+                    <input type="radio" name="payment" id="account-payment" class="pay">
+                </div>
+            </div>
         </div>
-        <div class="page">
-            <a href="#">1</a>&nbsp;&nbsp;&nbsp;
-            <a href="#">2</a>&nbsp;&nbsp;&nbsp;
-            <a href="#">3</a>
-            
+
+        <div class="confirm">
+            <h3>위 주문 내용을 확인하였으며, 회원 본인은 결제에 동의합니다.</h3>
+            <button class="skyblue">157,000원 결제하기</button>
         </div>
-        <form action="search">
-            <div class="searchbar"><input type="text" placeholder="검색어 입력" id="search2"><input type="image"
-                    src="btn_top_search.png"></div>
-        </form>
-        <div class="footer">
-            <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
-            <div class="company">내일의집 주식회사<br>서울특별시 노원구 ....</div>
-            <div class="cscenter">고객문의 010-1234-1234</div>
-            <div class="account">입금계좌</div>
-        </div>
+    </div>
+    <div class="footer">
+        <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
+        <div class="company">내일의집 주식회사<br>서울특별시 노원구 ....</div>
+        <div class="cscenter">고객문의 010-1234-1234</div>
+        <div class="account">입금계좌</div>
+    </div>
     </div>
 </body>
 
