@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,39 +76,43 @@
         background-color: #30CED8;
     }
 
-
-    .cart{
+    .complete {
         display: flex;
     }
-    .process_{
+
+    .process_ {
         display: flex;
         margin-left: auto;
         align-items: flex-end;
     }
-    .process_ p{
-        color:grey;
-    }
-    .line{
-        background-color:#FE4F79 ;
-        height: 10px;
-    }
-    .now{
-        color: cadetblue;
-    }
-    .table{
-        margin-top: 50px;
+
+    .message {
+        margin-top: 30px;
         display: flex;
         justify-content: center;
     }
-    table{
+
+    .line {
+        background-color: #FE4F79;
+        height: 10px;
+    }
+
+    .table {
+        margin-top: 30px;
+        border-top: 1px solid black;
+    }
+
+    table {
         width: 1500px;
     }
-    th{
-        background-color: #c3c3c3;
-        text-align: center;
+
+    img {
+        margin: 10px;
+
     }
-    td{
-        text-align: center;
+    
+    .order{
+        border:1px solid #e3e3e3;
     }
     .skyblue {
         width: 110px;
@@ -120,35 +125,16 @@
      
         letter-spacing: 2px;
     }
-    .total{
+    .buttons{
         margin-top: 50px;
         display: flex;
-        justify-content: flex-end;
-        border: 1px solid black;
-        padding: 20px;
-        text-align: right;
-        
+        justify-content: center;
     }
-    .white{
-        margin-top: 30px;
-        width: 120px;
-        height: 30px;
-        border: 1px solid black;
-        outline: none;
-        border-radius: 10px;
-        background: white;
-        color: black;
-        
-     
-        letter-spacing: 2px;
+    .buttons button{
+        margin-left: 50px;
     }
-    .order{
-        display: flex;
-        justify-content: flex-end;
-    }
-    .item{
-        text-align: left;
-    }
+
+
     .footer {
         display: flex;
         margin-top: 100px;
@@ -168,8 +154,8 @@
         background-color: #FE4F79;
         flex: 1 25%;
     }
-
 </style>
+
 <body>
     <div class="wrap">
         <div class="header">
@@ -196,7 +182,8 @@
                     거실
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button" onclick = "location.href = 'livingroom.html' ">쇼파</button></li>
+                    <li><button class="dropdown-item" type="button"
+                            onclick="location.href = 'livingroom.html' ">쇼파</button></li>
                     <li><button class="dropdown-item" type="button">거실테이블 </button></li>
                 </ul>
             </div>
@@ -223,8 +210,8 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     서재
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -234,8 +221,8 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn #30CED8 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     인테리어
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -245,59 +232,65 @@
                 </ul>
             </div>
         </div>
-        <div class="cart">
-            <h1>장바구니</h1> <div class="process_"><p class="now">장바구니 ></p><p>주문서작성/결제 ></p><p>주문완료</p></div>
+        <div class="complete">
+            <h1>주문완료</h1>
+            <div class="process_">
+                <p class="now">장바구니 ></p>
+                <p>주문서작성/결제 ></p>
+                <p>주문완료</p>
+            </div>
         </div>
+
         <div class="line"></div>
+        <div class="message">
+            <h1>주문이 완료되었습니다</h1>
+        </div>
         <div class="table">
             <table>
                 <tr>
-                    <th width="50px"><input type="checkbox" name="" id=""></select></th>
-                    <th width="200px" colspan="2">상품정보</th>
-                    <th width="100px">수량</th>
-                    <th width="100px">상품금액</th>
-                    <th width="100px">마일리지</th>
-                    <th width="100px">합계금액</th>
-                    <th width="100px">배송비</th>
-                </tr>
-                <tr>
-                    <td width="50px"><input type="checkbox" name="" id=""></td>
                     <td width="150px"><img src="goods\1000001672_main_070.jpg" alt="" width="150px"></td>
-                    <td class="item">  브라운 쇼파</td>
-                    <td>1개</td>
-                    <td>59,000원</td>
-                    <td align="center">적립예정 <br> 2,950</td>
-                    <td>59,000원</td>
-                    <td align="center">무료배송 <br> (상세페이지 참조) </td>
+                    <td>목재 수납장 + 의자 세트 <br> 2개 <br>98,000원</td>
                 </tr>
                 <tr>
-                    <td width="50px"><input type="checkbox" name="" id=""></td>
-                    <td width="150px"><img src="goods\1000001687_main_047.jpg" alt="" width="150px"></td>
-                    <td  class="item">목재 수납장 + 의자 세트</td>
-                    <td>2개</td>
-                    <td>49,000원</td>
-                    <td>적립예정 <br> 4,900</td>
-                    <td>98,000원</td>
-                    <td>무료배송 <br> (상세페이지 참조)</td>
+                    <td><img src="goods\1000001687_main_047.jpg" alt="" width="150px"></td>
+                    <td>브라운 쇼파 <br>1개 <br>59,000원</td>
                 </tr>
             </table>
         </div>
-        <button class="skyblue">쇼핑 계속하기</button>
-        <div class="total">
-            합계
-            <br>157,000원
-            <br>적립예정 마일리지:7,850
+        <div class="order">
+            <table>
+                <tr>
+                    <th width="100px">주문번호</th>
+                    <td>20210822001</td>
+                </tr>
+                <tr>
+                    <th>주문일자</th>
+                    <td>2021년 08월 22일 22시 30분</td>
+                </tr>
+                <tr>
+                    <th>결제수단</th>
+                    <td>무통장입금</td>
+                </tr>
+                <tr>
+                    <th>결제금액</th>
+                    <td>157,000</td>
+                </tr>
+                <tr>
+                    <th>입금계좌</th>
+                    <td>우체국 100000-10-1000000 (주)내일의집<br>*주문일로부터 2일 이내에 입금해주세요</td>
+                </tr>
+            </table>
         </div>
-        <button class="white">선택상품 삭제</button>
-        <button class="white">메인화면</button>
-        <div class="order"><button class="skyblue">상품 주문</button></div>
-        
+        <div class="buttons">
+            <button class="skyblue">쇼핑 계속하기</button><button class="skyblue">주문목록</button><button class="skyblue">메인</button></div>
         <div class="footer">
             <div class="logo"><a href="ex01.html"><img src="KakaoTalk_20210819_180805305.png" alt=""></a></div>
             <div class="company">내일의집 주식회사<br>서울특별시 노원구 ....</div>
             <div class="cscenter">고객문의 010-1234-1234</div>
             <div class="account">입금계좌</div>
         </div>
-        </div>
+    </div>
+
 </body>
+
 </html>
