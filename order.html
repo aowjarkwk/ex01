@@ -98,32 +98,36 @@
         height: 10px;
     }
 
-    table {
-        width: 1500px;
+    .tr{
+        display: flex;
     }
-
-    img {
-        margin: 10px;
-
+    .th{
+        width: 100px;
+    }
+    .td input{
+        width:300px;
     }
 
     .detail {
         margin: 10px;
     }
-    .address{
+    .address_table{
         margin-top: 30px;
         border: 1px solid #e3e3e3;
     }
-    .total{
-        margin-top: 30px;
-        border: 1px solid #e3e3e3;
+    
+    .item{
+        width: 160px;
         
     }
     
-    
-    .mileage{
-        margin-top: 30px;
-        border:1px solid #e3e3e3;
+    .mileage_table{
+        margin-top: 20px;
+        border: 1px solid #e3e3e3;
+    }
+    .total_table{
+        margin-top: 20px;
+        border: 1px solid #e3e3e3;
     }
     .payment {
         margin-top: 30px;
@@ -295,74 +299,65 @@
             </div>
         </div>
         <div class="line"></div>
-        <div class="table">
-            <table>
-                <tr>
-                    <td width="150px"><img src="goods\1000001672_main_070.jpg" alt="" width="150px"></td>
-                    <td>목재 수납장 + 의자 세트 <br> 2개 <br>98,000원</td>
-                </tr>
-                <tr>
-                    <td><img src="goods\1000001687_main_047.jpg" alt="" width="150px"></td>
-                    <td>브라운 쇼파 <br>1개 <br>59,000원</td>
-                </tr>
-            </table>
+        <div class="item_table">
+            <div class="tr">
+                <div class="th item"><img src="goods\1000001672_main_070.jpg" alt="" width="150px"></div>
+                <div class="td">목재 수납장 + 의자 세트 <br> 2개 <br>98,000원</div>
+            </div>
+            <div class="tr">
+                <div class="th item"><img src="goods\1000001687_main_047.jpg" alt="" width="150px"></div>
+                <div class="td">브라운 쇼파 <br>1개 <br>59,000원</div>
+            </div>
+            
         </div>
-        <div class="address">
-            <h1>배송지</h1>
-            <table>
-                <tr>
-                    <th width="100px">수령인</th>
-                    <td><input type="text" class="input"></td>
-                </tr>
-                <tr>
-                    <th>연락처</th>
-                    <td><input type="text" name="" id="" class="input"></td>
-                </tr>
-                <tr>
-                    <th>우편번호</th>
-                    <td><input type="text" name="" id="" class="input"></td>
-                </tr>
-                <tr>
-                    <th>주소</th>
-                    <td><input type="text" name="" id="" class="input"></td>
-                </tr>
-                <tr>
-                    <th>상세주소</th>
-                    <td><input type="text" name="" id="" class="input"></td>
-                </tr>
-                <tr>
-                    <th>배송메모</th>
-                    <td><input type="text" name="" id="" class="input"></td>
-                </tr>
-            </table>
+        <div class="address_table">
+                <div class="tr">
+                    <div class="th">수령인</div>
+                    <div class="td"><input type="text"></div>
+                </div>
+                <div class="tr">
+                    <div class="th">연락처</div>
+                    <div class="td"><input type="text"></div>
+                </div>
+                <div class="tr">
+                    <div class="th">우편번호</div>
+                    <div class="td"><input type="text"></div>
+                </div>
+                <div class="tr">
+                    <div class="th">주소</div>
+                    <div class="td"><input type="text"></div>
+                </div>
+                <div class="tr">
+                    <div class="th">상세주소</div>
+                    <div class="td"><input type="text"></div>
+                </div>
+                <div class="tr">
+                    <div class="th">배송메모</div>
+                    <div class="td"><input type="text"></div>
+                </div>
         </div>
-        <div class="mileage">
-        <table>
-            <tr>
-                <th width="100px">마일리지 적용</th>
-                <td><input type="text" name="" id="" placeholder="5,050" class="input"></td>
-            </tr>
-        </table>
+        <div class="mileage_table">
+            <div class="tr">
+                <div class="th">마일리지 적용</div>
+                <div class="td"><input type="text"></div>
+            </div>
     </div>
-    <div class="total">
-        <table>
-            <tr>
-                <th width="100px">총 상품 금액</th>
-                <td>157,000원</td>
-            </tr>
-            <tr>
-                <th width="100px">배송비</th>
-                <td>0원</td>
-            </tr>
-            <tr>
-                <th width="100px">적용 마일리지</th>
-                <td>0원</td>
-            </tr>
-            <tr>
-                <th width="100px">총 결제 금액</th>
-                <td>157,000원</td>
-            </tr>
-        </table>
+    <div class="total_table">
+        <div class="tr">
+            <div class="th">총 상품 금액</div>
+            <div class="td">157,000원</div>
+        </div>
+        <div class="tr">
+            <div class="th">배송비</div>
+            <div class="td">0원</div>
+        </div>
+        <div class="tr">
+            <div class="th">적용 마일리지</div>
+            <div class="td">0원</div>
+        </div><div class="tr">
+            <div class="th">총 결제 금액</div>
+            <div class="td">157,000원</div>
+        </div>
     </div>
         <div class="payment">
             <h1>결제수단</h1>
